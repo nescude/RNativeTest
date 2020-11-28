@@ -1,8 +1,7 @@
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView } from "react-native";
 import React from 'react';
 import { useSelector } from 'react-redux';
-import colors from '../styles/colors';
-import { useNavigation, RouteProp, useRoute } from "@react-navigation/native";
+import { RouteProp, useRoute } from "@react-navigation/native";
 import { createSelector } from "@reduxjs/toolkit";
 import { User } from '../utils/interfaces';
 import { RootState } from '../redux/rootReducer';
@@ -11,10 +10,7 @@ import DetailRow from '../components/DetailRow';
 import MainHeader from "../components/MainHeader";
 
 const UserDetails = () => {
-    
-    const navigation = useNavigation();
-
-  
+ 
     const route = useRoute<RouteProp<RootStackParamList, 'UserDetails'>>();
     const userId = route.params?.userId;
 
@@ -27,8 +23,6 @@ const UserDetails = () => {
     );
     const userData = useSelector(selectUserData);
 
-
-  
     return(
         <>
         <MainHeader title="User Details" subtitle={userData.name} backButton={true}>
@@ -65,21 +59,3 @@ const UserDetails = () => {
     );
 };
 export default UserDetails;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 0,
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    paddingBottom: '1%',
-    alignContent: 'flex-start',  
-  },
-  leftIcon: {
-    flex: 1,
-    paddingTop: '0%',
-    paddingLeft: '10%',
-  },
-  appbar: {
-    backgroundColor: colors.header_bg,
-  },
-});

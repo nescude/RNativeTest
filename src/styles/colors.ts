@@ -5,7 +5,6 @@ const colors = {
   text: { light: '#bdbdbd', dark: '#424242' },
   background: 'white',
   header_bg: '#17BEBB',
-  header: '#fafafa',
 };
 
 export default colors;

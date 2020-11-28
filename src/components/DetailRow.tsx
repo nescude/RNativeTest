@@ -1,6 +1,5 @@
-import { CurrentRenderContext } from '@react-navigation/native';
-import React, { Component, ReactElement } from 'react';
-import { StyleSheet, Text, View, ViewComponent } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import styler from '../styles/textStylers';
 import colors from '../styles/colors';
